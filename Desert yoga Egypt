@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Yoga Egypt | Yoga & Equestrian Retreats</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-gold: #c5a059;
+            --dark-sand: #b89150;
+            --warm-bg: #fdfbf7;
+            --card-bg: #f8f4ed;
+            --text-dark: #2c2722;
+            --accent-terracotta: #a35d38;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--warm-bg);
+            color: var(--text-dark);
+            line-height: 1.7;
+        }
+
+        h1, h2, h3, .logo-text {
+            font-family: 'Cinzel', serif;
+            letter-spacing: 1px;
+        }
+
+        /* Navbar */
+        header {
+            background-color: rgba(253, 251, 247, 0.95);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            color: var(--primary-gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            transition: color 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 8% 60px;
+            text-align: center;
+            background: linear-gradient(180deg, rgba(197, 160, 89, 0.08) 0%, rgba(253, 251, 247, 0) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            font-size: 1.05rem;
+            color: #554f47;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: #fff;
+            padding: 14px 35px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-sand);
+            transform: translateY(-2px);
+        }
+
+        /* Carousel Gallery Section */
+        .gallery-section {
+            padding: 60px 5%;
+            text-align: center;
+        }
+
+        .gallery-section h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 20px;
+            overflow-x: auto;
+            padding: 20px 0;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-container::-webkit-scrollbar {
+            height: 8px;
+        }
+
+        .carousel-container::-webkit-scrollbar-thumb {
+            background: var(--primary-gold);
+            border-radius: 4px;
+        }
+
+        .video-card {
+            min-width: 300px;
+            max-width: 320px;
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            flex-shrink: 0;
+        }
+
+        .video-card video, .video-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .video-card-info {
+            padding: 15px;
+            text-align: left;
+        }
+
+        .video-card-info h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        /* Siwa Section */
+        .siwa-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            padding: 80px 8%;
+            background-color: var(--card-bg);
+            margin: 40px 0;
+        }
+
+        .siwa-content h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        .siwa-img img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+        }
+
+        /* Retreat Holidays Section */
+        .retreats-section {
+            padding: 80px 8%;
+            text-align: center;
+        }
+
+        .retreats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .retreat-card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .retreat-card img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+        }
+
+        .retreat-card-body {
+            padding: 25px;
+            text-align: left;
+        }
+
+        .retreat-card-body h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+        }
+
+        .retreat-card-body p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: var(--text-dark);
+            color: var(--warm-bg);
+            text-align: center;
+            padding: 30px;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .siwa-section {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="logo-container">
+            <div class="logo-text">Desert Yoga <span>Egypt</span></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#retreats">Retreat Holidays</a></li>
+                <li><a href="#siwa">Siwa Retreat</a></li>
+                <li><a href="#dates">Dates</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </header>
+
+    <!-- Main Hero Section -->
+    <section class="hero" id="home">
+        <h1>Retreat Holidays & Equestrian Journeys</h1>
+        <p>
+            Explore the Wonders of Egypt with <strong>Desert Yoga Egypt</strong>. 
+            We offer unique gateways into Egypt’s soul—combining peaceful yoga practice, healing desert landscapes, and connection with majestic, lovingly cared-for horses. Join us to create memories that stay with you long after the journey ends.
+        </p>
+        <a href="#retreats" class="btn-primary">Book Now</a>
+    </section>
+
+    <!-- Video Carousel Gallery -->
+    <section class="gallery-section">
+        <h2>Experience The Journey</h2>
+        <p style="color: #777;">Scroll sideways to explore our experiences</p>
+        
+        <div class="carousel-container">
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Yoga in Desert">
+                <div class="video-card-info">
+                    <h4>Cairo, Siwa & Luxor</h4>
+                    <p>Desert Yoga & Horse Riding</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&w=600&q=80" alt="Horses">
+                <div class="video-card-info">
+                    <h4>Horses & Yoga in Luxor</h4>
+                    <p>Unwind amongst history</p>
+                </div>
+            </div>
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" alt="Siwa Oasis">
+                <div class="video-card-info">
+                    <h4>Siwa Express</h4>
+                    <p>Salt lakes & Dune Riding</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Siwa Retreat & Stable Section -->
+    <section class="siwa-section" id="siwa">
+        <div class="siwa-content">
+            <h2>Our Haven in Siwa Oasis</h2>
+            <p>
+                Tucked away amidst endless sand dunes and tranquil palm groves, our Siwa location offers authentic peace, natural healing waters, and genuine Egyptian hospitality. Discover the magic of holistic yoga practice and riding through untouched landscapes.
+            </p>
+            <br>
+            <a href="#retreats" class="btn-primary">Explore Siwa Retreat</a>
+        </div>
+        <div class="siwa-img">
+            <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=800&q=80" alt="Siwa Oasis Haven">
+        </div>
+    </section>
+
+    <!-- Retreat Holidays Programs Section -->
+    <section class="retreats-section" id="retreats">
+        <h2>Retreat Holidays & Programs</h2>
+        <p style="color: #666;">Choose your transformative journey across Egypt</p>
+
+        <div class="retreats-grid">
+            <!-- Program 1 -->
+            <div class="retreat-card">
+                <img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=600&q=80" alt="Cairo & Siwa">
+                <div class="retreat-card-body">
+                    <h3>Cairo & Siwa Oasis</h3>
+                    <p>A unique journey connecting desert meditation, salt lake floating, and horseback exploration across breathtaking dunes.</p>
+                    <a href="#" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="retreat-card">
+                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Horses & Yoga Luxor">
+                <div class="retreat-card-body">
+                    <h3>Horses & Yoga Retreat in Luxor</h3>
+                    <p>Combine the peacefulness of yoga practice with horseback riding amongst ancient temples and peaceful Nile scenery.</p>
+                    <a href="#" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="retreat-card">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Siwa Express">
+                <div class="retreat-card-body">
+                    <h3>Siwa Express Healing Journey</h3>
+                    <p>Focus on deep relaxation, daily yoga sessions, and discovering oasis landscapes and natural thermal springs.</p>
+                    <a href="#" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Desert Yoga Egypt. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
