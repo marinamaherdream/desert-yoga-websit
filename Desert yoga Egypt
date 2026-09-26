@@ -293,7 +293,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#retreats">Retreat Holidays</a></li>
                 <li><a href="#siwa">Siwa Retreat</a></li>
-                <li><a href="#dates">Dates</a></li>
+                <li><a href="dates.html" target="_blank">Dates</a></li>
             </ul>
         </nav>
         <div class="social-icons">
@@ -370,7 +370,7 @@
                 <div class="retreat-card-body">
                     <h3>Cairo & Siwa Oasis</h3>
                     <p>A unique journey connecting desert meditation, salt lake floating, and horseback exploration across breathtaking dunes.</p>
-                    <a href="#" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    <a href="dates.html" target="_blank" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
                 </div>
             </div>
 
@@ -380,7 +380,7 @@
                 <div class="retreat-card-body">
                     <h3>Horses & Yoga Retreat in Luxor</h3>
                     <p>Combine the peacefulness of yoga practice with horseback riding amongst ancient temples and peaceful Nile scenery.</p>
-                    <a href="#" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    <a href="dates.html" target="_blank" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
                 </div>
             </div>
 
@@ -390,7 +390,7 @@
                 <div class="retreat-card-body">
                     <h3>Siwa Express Healing Journey</h3>
                     <p>Focus on deep relaxation, daily yoga sessions, and discovering oasis landscapes and natural thermal springs.</p>
-                    <a href="#" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
+                    <a href="dates.html" target="_blank" class="btn-primary" style="width: 100%; text-align: center;">Book Now</a>
                 </div>
             </div>
         </div>
