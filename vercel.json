@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/plasmic-host",
+      "destination": "/plasmic-host.html"
+    }
+  ]
+}
